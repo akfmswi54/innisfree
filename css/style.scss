@@ -1,0 +1,632 @@
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@mixin root {
+  &:hover {
+    color: #12b560;
+    // color: #0D4A3A;
+  }
+}
+#wrap {
+  font-family: "SDNeoL", "notoR", "Malgun Gothic", "맑은 고딕", "돋움",
+    sans-serif;
+  > .baner {
+    position: relative;
+    width: 100%;
+
+    background-image: url(./..//images/bigsale.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    > a {
+      display: block;
+      height: 60px;
+      text-indent: -99999px;
+    }
+    > button {
+      width: 100px;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      margin-top: -10px;
+      // border: 1px solid #000;
+      // border-radius: 30px;
+    }
+  }
+  > header {
+    position: relative;
+
+    > .container {
+      position: relative;
+      width: 100%;
+      height: 150px;
+      border: 1px solid #14ca42;
+      // background-color: #f3f3f3;
+
+      > .snb-container {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        background-color: #f3f1f2;
+        //   border: 1px solid #000;
+        > .snb {
+          display: flex;
+          position: absolute;
+          left: 50%;
+          top: 15px;
+          margin-left: 200px;
+          // border: 1px solid #000;
+          > li {
+            margin-left: 15px;
+
+            > a {
+              display: block;
+              color: #777;
+              font-size: 14px;
+              font-weight: 600;
+              font-family: "SDNeoL", "notoR";
+              @include root();
+            }
+          } //end of li
+        } //end of .snb
+      } //snb-container
+
+      > nav {
+        position: relative;
+        max-width: 1280px;
+        margin: 20px auto;
+        // border: 1px solid #000;
+        background-color: #fff;
+        display: flex;
+
+        > h1 {
+          width: 200px;
+          margin-top: -10px;
+          // border: 1px solid #000;
+          background-repeat: no-repeat;
+          background-image: url(./../images/logo_basic.png);
+
+          > a {
+            display: block;
+            height: 40px;
+            text-indent: -999px;
+          }
+        } //h1
+        > .search {
+          position: relative;
+          width: 350px;
+          // position: absolute;
+          // top: 20%;
+          // left: 50%;
+          margin-left: 30px;
+          // border: 1px solid #000;
+          border: none;
+      
+          > input {
+            width: 100%;
+           height: 34px;
+            background: rgb(245, 246, 247);
+            border: none;
+            font-size: 15px;
+            font-weight: 500;
+            text-align: left;
+            padding: 0px 16px 0px 55px;
+            color: rgb(73, 80, 86);
+            transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+            appearance: none;
+            border-radius:10px;
+            border: 2px solid #d9d9d9; 
+          &:focus{
+            border: none;
+            outline: none;
+            touch-action: manipulation;
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+          }
+          }
+
+          > button {
+            // border: 1px solid #000;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: 140px;
+            width: 30px;
+            height: 30px;
+            border: none;
+            background: none;
+            border-radius: 20px;
+            background-image: url(./../images/icon_search.png);
+            background-repeat: no-repeat;
+            // text-indent: -9999999px;
+          }
+          @media screen and (max-width: 640px) {
+            max-width: 400px;
+            left: -20px;
+            top: 0;
+          }
+        } //form
+
+        > .main-gnb {
+          // border: 1px solid #000;
+
+          > .main-gnb-container {
+            max-width: 600px;
+            display: flex;
+            position: absolute;
+            right: 0;
+            @media screen and (max-width: 640px) {
+              max-width: 400px;
+              top: 60px;
+            }
+            > li {
+              margin-left: 20px;
+              font-size: 18px;
+              font-weight: 600;
+              @media screen and (max-width: 640px) {
+                margin-left: 10px;
+                font-size: 14px;
+              }
+              > a {
+                display: block;
+                height: 40px;
+                &:hover {
+                  @include root();
+                }
+              }
+            }
+          }
+        }
+        @media screen and (max-width: 640px) {
+        }
+        > .gnb-wrap {
+          z-index: 10;
+          width: 170px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: 20px;
+          border: 1px solid #14ca42;
+          border-bottom: none;
+          > a {
+            padding-left: 27px;
+            line-height: 30px;
+            color: #000;
+            font-size: 15px;
+            font-weight: 700;
+            &::before {
+              content: "";
+              display: inline-block;
+              margin: 0 10px 0 0;
+              background: url(https://static.oliveyoung.co.kr/pc-static-root/image/comm/ico_menu_off.png)
+                0 14px no-repeat;
+              width: 24px;
+              height: 44px;
+              vertical-align: middle;
+            }
+          }
+
+          > .gnb {
+            // position: absolute;
+            // top: 46px;
+            // left: 50%;
+            // width: 170px;
+            // height: 450px;
+            z-index: 100;
+            padding-top: 10px;
+            // margin-left: -510px;
+            background: rgba(51, 51, 51, 0.5);
+            display: none;
+            // border: 1px solid #000;
+            > .type {
+              margin-top: 0;
+
+              > a {
+                //  border: 1px solid #000;
+                display: block;
+                height: 40px;
+                line-height: 35px;
+                padding: 0 23px;
+                font-size: 14px;
+                color: #fff;
+                font-weight: 700;
+                &:hover {
+                  background-color: #2f3030;
+                }
+              } //end of a
+              > .lnb-wrap {
+                display: none;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-top: 45px;
+                left: 340px;
+                width: 220px;
+                background-color: #fff;
+                border-left: 1px solid #f4f5f7;
+                border-right: 1px solid #f4f5f7;
+                border-bottom: 1px solid #f4f5f7;
+                // border-top: 1px solid #000;
+                > a {
+                  display: block;
+                  width: 100%;
+                  height: 400px;
+                  > .info {
+                    padding: 20px 30px 0;
+                    > .info-name {
+                      display: inline-block;
+                      margin-bottom: 18px;
+                      font-size: 13px;
+                      font-weight: 700;
+                      color: #222;
+                    } //p
+
+                    > .tit-group {
+                      margin-bottom: 7px;
+                      > .tit-1 {
+                        width: 173px;
+                        height: 25px;
+                        margin-bottom: 5px;
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: #333;
+                        line-height: 1.3;
+                        overflow: hidden;
+                      }
+                      > .tit-2 {
+                        width: 173px;
+                        height: 22px;
+                        font-size: 16px;
+                        color: #333;
+                        line-height: 1.4;
+                        overflow: hidden;
+                      }
+                    }
+                    > .price-group {
+                      > .price-name {
+                        font-size: 24px;
+                        color: #e02020;
+                        font-weight: 700;
+                        > em {
+                          font-size: 14px;
+                        }
+                      }
+                    } //.price-group
+                  } //infp
+
+                  > .info-img {
+                    > img {
+                      display: block;
+                      max-width: 170px;
+                      max-height: 203px;
+                      // border: 1px solid #000;
+                    }
+                  } //img
+                } //a
+              } //lnb-wrap
+              > .lnb {
+                display: none;
+                position: absolute;
+                top: 45px;
+                left: 50%;
+                width: 170px;
+                height: 370px;
+                background-color: rgba(255, 255, 255, 0.5);
+                border-right: 1px solid #f4f5f7;
+                border-bottom: 1px solid #f4f5f7;
+                padding: 15px 0;
+                margin-left: 85px;
+                > li {
+                  // border: 1px solid #000;
+                  //CSS는 같은 속성을 여러 번 정의했을 때, 나중에 설정한 값이 적용됩니다. 만약 나중에 설정한 값이 적용되지 않게 하려면 속성값 뒤에 !important를 붙입니다.
+                  padding-left: 24px;
+                  > a {
+                    display: block;
+                    height: 27px;
+                    // padding-left: 12px;
+                    letter-spacing: 1px;
+                    line-height: 27px;
+                    font-size: 14px;
+                    font-weight: 800;
+                    color: #000000;
+                    // border: 1px solid #000;
+                    &:hover {
+                      display: inline-block;
+                      border-bottom: 1px solid #757d86;
+                    }
+                  } //end of a
+                } //end of li
+              } //end of .lnb
+            } //end of li
+          } //end of .gnb
+        } //gnb-wrap
+      } //end of nav
+    } //end of .container
+  } //end of header
+
+  > section {
+    // display: none;
+    width: 100%;
+    height: 700px;
+    // text-indent: -9999px;
+    z-index: -1;
+    .slides {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      > .slides-container {
+        // display: flex;
+        // position: absolute;
+        // left: 0;
+        // top: 0;
+        z-index: -1;
+        width: 100%;
+        > p {
+          display: none;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+
+          &:nth-child(1) {
+            display: block;
+            background-image: url(./../images/이미지/BM11_393_left_pc.jpg);
+          }
+          &:nth-child(2) {
+            background-image: url(./../images/새로워진이니스프리/BM11_394_left_pc.jpg);
+          }
+          &:nth-child(3) {
+            background-image: url(./../images/새로워진이니스프리/BM11_395_left_pc.jpg);
+          }
+          &:nth-child(4) {
+            background-image: url(./../images/이미지/BM11_269_left_pc.jpg);
+          }
+          &:nth-child(5) {
+            background-image: url(./../images/새로워진이니스프리/이니스프리.png);
+            background-position: center -30px;
+          }
+          &:nth-child(6) {
+            background-image: url(./../images/새로워진이니스프리/001.png);
+          }
+
+          > a {
+            display: block;
+            height: 600px;
+            // text-indent: -9999px;
+          } //a
+          > .tit {
+            z-index: 100;
+            position: relative;
+            left: 50%;
+            // border: 1px solid #000;
+            width: 200px;
+            margin-left: -150px;
+            font-size: 18px;
+            > span {
+              width: 100%;
+              position: absolute;
+              top: 20%;
+              > strong {
+                position: absolute;
+                top: 0;
+                left: 0;
+                // border: 1px solid #000;
+                background: #ffff89;
+                color: #222;
+              }
+              > span {
+                position: absolute;
+                top: 0;
+                left: 60px;
+                // border: 1px solid #000;
+                background: #222;
+                color: #fff;
+              } //
+              > .tit2:after {
+                // border: 1px solid #000;
+                width: 180px;
+                position: absolute;
+                left: 50%;
+                top: 70px;
+                margin-left: -100px;
+                font-size: 30px;
+                font-weight: 800;
+                color: #222;
+                line-height: 46px;
+
+                content: "뉴 그린 퍼즐";
+              }
+            } //span
+          } //tit
+        } //end of p
+      } //end of .slides-container
+
+      > .slides-pagination {
+        position: absolute;
+        right: 90px;
+        top: 50%;
+        margin-top: -200px;
+
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+        > li {
+          width: 64px;
+          // width: 100px;
+
+          background-size: cover;
+          // background-repeat: no-repeat;
+          // background-position: center center;
+          &:nth-of-type(1) {
+            background-image: url(./../images/새로워진이니스프리/34416_l_S_250.jpg);
+          }
+          &:nth-of-type(2) {
+            background-image: url(./../images/새로워진이니스프리/34505_p_S_320.jpg);
+          }
+          &:nth-of-type(3) {
+            background-image: url(./../images/새로워진이니스프리/34496_p_S_450.jpg);
+          }
+          &:nth-of-type(4) {
+            background-image: url(./../images/새로워진이니스프리/34508_l_S_320.jpg);
+          }
+          &:nth-of-type(5) {
+            background-image: url(./../images/새로워진이니스프리/34508_l_S_320.jpg);
+          }
+          &:nth-of-type(6) {
+            background-image: url(./../images/새로워진이니스프리/34517_l_S_320.jpg);
+          }
+
+          > a {
+            display: block;
+            height: 64px;
+            border-bottom: 1px solid #c2c2c2;
+            text-indent: -9999px;
+          } //end of a
+
+          &.on > a,
+          &:hover > a {
+            border: 2px solid #12b560;
+            box-sizing: border-box;
+          }
+        } //end of li
+      } //end of .slides-pagination
+
+      > .slides-navigation {
+        position: relative;
+        left: 50%;
+        top: 90%;
+        margin-left: 250px;
+        display: block;
+        z-index: 100;
+
+        &.slides-prev {
+          position: absolute;
+          left: 70%;
+          margin-left: 50px;
+          text-indent: -9999px;
+          width: 30px;
+          height: 30px;
+          border-radius: 20px;
+          // border: 1px solid #000;
+          background-color: #12b560;
+          &.on,
+          &:hover {
+            background-color: #0d4a3a;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 13px;
+            border-style: solid;
+            border-width: 0px 0px 2px 2px;
+            z-index: 9;
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg);
+            border-color: #fff;
+          }
+        }
+
+        &.slides-next {
+          position: absolute;
+          left: 70%;
+          text-indent: -9999px;
+          width: 30px;
+          height: 30px;
+          border-radius: 20px;
+          // border: 1px solid #000;
+          background-color: #12b560;
+          &.on,
+          &:hover {
+            background-color: #0d4a3a;
+          }
+          text-indent: -9999px;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            border-style: solid;
+            border-width: 0px 0px 2px 2px;
+            z-index: 9;
+            width: 10px;
+            height: 10px;
+            transform: rotate(220deg);
+            border-color: #fff;
+            outline: none;
+            cursor: pointer;
+            color: transparent;
+            font-size: 0;
+          }
+        }
+      } //end of .slides-navigation
+
+      > .game-center {
+        z-index: -2;
+        // // background-color: rgba(0, 0, 0, 0.5);
+        // width: 1280px;
+        height: 90px;
+        // // border: 1px solid #000;
+        // margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        // box-shadow: inset 0 0 0 1000px rgba(163, 163, 163, 0.3);
+        // color: rgba(255, 255, 255, 1);
+        // background-color: transparent;
+
+        //  background-color: #12b560;
+        //  background-color: hsla(120, 100%, 25%, 0.3);
+        background: rgba(51, 255, 80, 0.5);
+        > button {
+          z-index: 100;
+          box-shadow: 5px 5px 5px 3px;
+          margin-top: 20px;
+          width: 120px;
+          height: 50px;
+          font-weight: 800;
+          border-radius: 30px;
+          @include root();
+        }
+      }
+    } //end of .slides
+  } //section
+  //슬라이드
+
+  > footer {
+    height: 100px;
+>.footer-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  min-width: 1024px;
+  max-width: 1280px;
+  margin: 20px auto;
+
+
+  >.footer-top-iteam{
+     padding: 15px 0 15px 0;
+    margin-left: -16px;
+    display: flex;
+    font-size: 16px;
+    >li{
+      margin-right: 30px;
+      >a{display: block;
+      height: 64px;}
+    }
+  }
+}
+    > address {
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+    }
+  }
+} //end of #wrap
