@@ -12,6 +12,17 @@
     // color: #0D4A3A;
   }
 }
+
+@mixin gradient{
+   background:
+        linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+        linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+        linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+@mixin gradient2{
+  background: radial-gradient(at 0% 30%, #fff 100px,  #12b560 100%);//원의일부
+ 
+}
 #wrap {
   font-family: "SDNeoL", "notoR", "Malgun Gothic", "맑은 고딕", "돋움",
     sans-serif;
@@ -99,28 +110,17 @@
         } //h1
         > .search {
           position: relative;
-          width: 350px;
-          // position: absolute;
-          // top: 20%;
-          // left: 50%;
-          margin-left: 30px;
-          // border: 1px solid #000;
-          border: none;
-      
+
+          
           > input {
-            width: 100%;
-           height: 34px;
-            background: rgb(245, 246, 247);
-            border: none;
-            font-size: 15px;
-            font-weight: 500;
-            text-align: left;
-            padding: 0px 16px 0px 55px;
-            color: rgb(73, 80, 86);
-            transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
-            appearance: none;
-            border-radius:10px;
-            border: 2px solid #d9d9d9; 
+          
+            width: 350px;
+            height: 34px;
+            padding-left:60px;
+            border: 2px solid #d9d9d9;
+            border-radius: 21px;
+            overflow: hidden;
+            
           &:focus{
             border: none;
             outline: none;
@@ -131,17 +131,18 @@
 
           > button {
             // border: 1px solid #000;
-            position: absolute;
-            top: 0;
-            left: 50%;
+           position: absolute;
+           left: 50%;
+           top: 5px;
             margin-left: 140px;
-            width: 30px;
-            height: 30px;
+            width: 23px;
+            height: 23px;
             border: none;
             background: none;
             border-radius: 20px;
             background-image: url(./../images/icon_search.png);
             background-repeat: no-repeat;
+            background-size: cover;
             // text-indent: -9999999px;
           }
           @media screen and (max-width: 640px) {
@@ -177,12 +178,20 @@
                 &:hover {
                   @include root();
                 }
+              }//a
+              >.hit{
+                position: absolute;
+                top: -3px;
+                left:55px;
+                width: 6px;
+                height: 6px;
+                background-color: #12b560;
+                border-radius: 50%;
               }
-            }
-          }
-        }
-        @media screen and (max-width: 640px) {
-        }
+            }//li
+          }//.main-gnb-container
+        }//main-gnb 
+       
         > .gnb-wrap {
           z-index: 10;
           width: 170px;
@@ -211,11 +220,7 @@
           }
 
           > .gnb {
-            // position: absolute;
-            // top: 46px;
-            // left: 50%;
-            // width: 170px;
-            // height: 450px;
+        
             z-index: 100;
             padding-top: 10px;
             // margin-left: -510px;
@@ -349,6 +354,7 @@
     } //end of .container
   } //end of header
 
+/* 메인  슬라이드*/
   > section {
     // display: none;
     width: 100%;
@@ -567,50 +573,161 @@
           }
         }
       } //end of .slides-navigation
-
+/*  게임*/
       > .game-center {
         z-index: -2;
-        // // background-color: rgba(0, 0, 0, 0.5);
-        // width: 1280px;
         height: 90px;
-        // // border: 1px solid #000;
-        // margin: 0 auto;
         display: flex;
         justify-content: space-evenly;
-        // box-shadow: inset 0 0 0 1000px rgba(163, 163, 163, 0.3);
-        // color: rgba(255, 255, 255, 1);
-        // background-color: transparent;
-
-        //  background-color: #12b560;
-        //  background-color: hsla(120, 100%, 25%, 0.3);
-        background: rgba(51, 255, 80, 0.5);
+        // background: rgba(25,31, 52, 0.2);
+      //  background: #f3f1f2;
+      background: radial-gradient(at 0% 30%, #f4f3f3 20%,  #E3E3E3 100% );
         > button {
-          z-index: 100;
+         border: 1px solid #fff;
           box-shadow: 5px 5px 5px 3px;
           margin-top: 20px;
           width: 120px;
           height: 50px;
           font-weight: 800;
           border-radius: 30px;
-          @include root();
-        }
-      }
+          color: #777;
+          &:hover{
+            background-color: #ced0d2;
+            border: 1px solid #777;
+          }
+        }//button
+      }//game-center
     } //end of .slides
   } //section
-  //슬라이드
+
+  /* 나이병 선호도  리얼리티 */
+>.hot-real-list{
+  >h1{
+   width: 1280px;
+    height: 60px;
+    margin: 50px auto;
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+    border: 1px solid #000;
+    @include gradient();
+  }
+>.container{
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: #12b560;
+  >.early{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border: 1px solid #d5d5d5;
+    >.list-container{
+      
+      >li{
+        border: 1px solid #b03232;
+        >a{
+        >img{
+          width: 80px;
+          border: 1px solid #000;
+        }
+      }
+      }//li   
+}//list-container
+> button {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  left: 30%;
+  bottom: 0;
+  // border: 1px solid #000;
+  // border-radius: 30px;
+}
+    
+  }//early
+  >.mid{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border: 1px solid #d5d5d5;
+    >.list-container{
+      
+      >li{
+        border: 1px solid #b03232;
+        >a{
+        >img{
+          width: 80px;
+          border: 1px solid #000;
+        }
+      }
+      }//li   
+}//list-container
+         > button {
+          width: 200px;
+          height: 50px;
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          // border: 1px solid #000;
+          // border-radius: 30px;
+        }
+  }//mid
+  >.late{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border: 1px solid #d5d5d5;
+    > button {
+      width: 200px;
+      height: 50px;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      // border: 1px solid #000;
+      // border-radius: 30px;
+    }
+  }//late
+  &.list-container{
+    >li{
+ >a{
+        display: block;
+        height: 30px;
+ >img{
+      width: 50px; }
+    }
+    } 
+  }
+  & button {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+
+    // border: 1px solid #000;
+    // border-radius: 30px;
+  }
+}//contaiener
+}//hot-real-list
+ 
 
   > footer {
     height: 100px;
+    border-top: 1px solid #dbdbdb;
+   
+
 >.footer-top{
+border-bottom: 1px solid #dbdbdb;
+>.footer-top-container{
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 64px;
   min-width: 1024px;
   max-width: 1280px;
-  margin: 20px auto;
-
-
+  line-height:60px;
+  margin: 0 auto;
   >.footer-top-iteam{
      padding: 15px 0 15px 0;
     margin-left: -16px;
@@ -620,13 +737,140 @@
       margin-right: 30px;
       >a{display: block;
       height: 64px;}
-    }
+    }//
+  }//.footer-top-iteam
+ >.ftsns{
+  width:200px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  opacity: 0.8;
+//  border: 1px solid #000;
+  >.youtube{
+    width: 32px;
+   height: 22px; 
+   
+>a{
+  display: block;
+ background-image: url(./../images/icon_youtube.png);
+    background-repeat: no-repeat;
+  text-indent: -99999px;
+}
+  }//yoytu
+>.Instagram{
+  width: 28px;
+  height: 28px;
+ 
+  >a{
+    display: block;
+    background: url(./../images/icon_instagram.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px; 
+  }
+}//
+
+>.Facebook{
+  width: 15px;
+ height: 28px;
+  >a{
+    display: block;
+    background-image: url(./../images/icon_facebook.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px; 
   }
 }
+>.Twitter{
+  width: 28px;
+  height: 24px;
+  >a{
+    display: block;
+    background-image: url(./../images/icon_twitter.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px; }
+}
+>.App{
+  width: 24px;
+  height: 31px;
+  >a{
+    display: block;
+    background-image: url(./../images/icon_app.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px; 
+
+  }
+}
+}//ftsn 
+}//"footer-top-container
+}//footer-top
+>.footer-bottom{
+  // display: flex;
+  //   justify-content: space-between;
+    max-width: 1280px;
+    padding: 54px 0 0;
+    margin: 0 auto;
+  >.footer-bottom-container{
+    display: flex;
+    overflow: hidden;
+    margin: 16px 0 0;
+    font: 14px/1.7 'SDNeoL', 'notoL';
+    >.footer-bottom-iteam{
+     
+      >h2{
+        background-image: url(./../images/logo_footer.png);
+        background-repeat: no-repeat;
+        >a{
+          display: block;
+          text-indent: -99999px;
+        }
+      }//h2
+      >p{
+        >a{
+         text-decoration: underline;
+        }
+      }//p
+      >.awards{
+        padding-left: 42px;
+    margin-top: 12px;
+    line-height: 20px;
+    background: url(./../images/awards_footer.png) no-repeat left top;
+      }
+    }//footer-bottom-iteam
+    >.service-center{
+      width: 380px;
+    height: 212px;
+    margin-left:90px;
+    padding: 31px 31px;
+    background: #f3f3f3;
+    box-sizing: border-box;
+    >dl{
+      >dd{
+         >a{
+          font-size: 20px; }
+         
+      }//dd
+    }//dl
+    >.btn-service{
+      display: flex;
+      align-items: center;
+      width: 110px;
+      height: 32px;
+      margin-top: 11px;
+      color: #2f2f2f;
+      border: 1px solid #222;
+      box-sizing: border-box;
+      padding-left: 18px;
+      background: url(./../images/arw_link_bs.png) no-repeat right 15px center;
+  
+}
+   }//service-center
+  
+  }//footer-bottom-container
+
+}//footer-bottom
     > address {
       height: 50px;
       line-height: 50px;
       text-align: center;
     }
-  }
+  }//footer
 } //end of #wrap
