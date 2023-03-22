@@ -110,10 +110,8 @@
         } //h1
         > .search {
           position: relative;
-
-          
+          top: -5px;
           > input {
-          
             width: 350px;
             height: 34px;
             padding-left:60px;
@@ -220,7 +218,6 @@
           }
 
           > .gnb {
-        
             z-index: 100;
             padding-top: 10px;
             // margin-left: -510px;
@@ -231,7 +228,6 @@
               margin-top: 0;
 
               > a {
-                //  border: 1px solid #000;
                 display: block;
                 height: 40px;
                 line-height: 35px;
@@ -245,7 +241,6 @@
               } //end of a
               > .lnb-wrap {
                 display: none;
-
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -358,8 +353,7 @@
   > section {
     // display: none;
     width: 100%;
-    height: 700px;
-    // text-indent: -9999px;
+    height: 690px;
     z-index: -1;
     .slides {
       position: relative;
@@ -378,29 +372,31 @@
           left: 0;
           top: 0;
           width: 100%;
+          
           background-position: center center;
           background-size: cover;
           background-repeat: no-repeat;
 
           &:nth-child(1) {
             display: block;
-            background-image: url(./../images/이미지/BM11_393_left_pc.jpg);
+            background-image: url(./../images/image/BM11_393_left_pc.jpg);
           }
           &:nth-child(2) {
-            background-image: url(./../images/새로워진이니스프리/BM11_394_left_pc.jpg);
+            background-image: url(./../images/new/BM11_394_left_pc.jpg);
           }
           &:nth-child(3) {
-            background-image: url(./../images/새로워진이니스프리/BM11_395_left_pc.jpg);
+            background-image: url(./../images/new/BM11_395_left_pc.jpg);
           }
           &:nth-child(4) {
-            background-image: url(./../images/이미지/BM11_269_left_pc.jpg);
+            background-image: url(./../images/image/BM11_269_left_pc.jpg);
           }
           &:nth-child(5) {
-            background-image: url(./../images/새로워진이니스프리/이니스프리.png);
+            background-image: url(./../images/new/innisfree.png);
             background-position: center -30px;
-          }
+          }    
           &:nth-child(6) {
-            background-image: url(./../images/새로워진이니스프리/001.png);
+            background-image: url(./../images/bigimage_1.jpg);
+            
           }
 
           > a {
@@ -447,11 +443,40 @@
                 font-weight: 800;
                 color: #222;
                 line-height: 46px;
-
                 content: "뉴 그린 퍼즐";
               }
             } //span
           } //tit
+          >.slides-tit{
+            position: relative;
+            left: 10%;
+            top: 100px;
+            width: 300px;
+            color: #007536;
+            text-align: center;
+        
+            >.slides0tit{
+              font-size: 50px;
+              font-weight: 700;
+              margin-top: 30px;
+
+            }
+            >.slides1tit{
+             
+            >img{
+              width: 250px;
+              margin-top: 20px;
+              margin-left:20px;
+              display: block;
+            }
+            }
+            >.slides2tit{
+              font-size: 18px;
+              line-height: 30px;
+              
+            }
+
+          }
         } //end of p
       } //end of .slides-container
 
@@ -470,22 +495,22 @@
           // background-repeat: no-repeat;
           // background-position: center center;
           &:nth-of-type(1) {
-            background-image: url(./../images/새로워진이니스프리/34416_l_S_250.jpg);
+            background-image: url(./../images/new/34416_l_S_250.jpg);
           }
           &:nth-of-type(2) {
-            background-image: url(./../images/새로워진이니스프리/34505_p_S_320.jpg);
+            background-image: url(./../images/new/34505_p_S_320.jpg);
           }
           &:nth-of-type(3) {
-            background-image: url(./../images/새로워진이니스프리/34496_p_S_450.jpg);
+            background-image: url(./../images/new/34496_p_S_450.jpg);
           }
           &:nth-of-type(4) {
-            background-image: url(./../images/새로워진이니스프리/34508_l_S_320.jpg);
+            background-image: url(./../images/new/34508_l_S_320.jpg);
           }
           &:nth-of-type(5) {
-            background-image: url(./../images/새로워진이니스프리/34508_l_S_320.jpg);
+            background-image: url(./../images/new/34508_l_S_320.jpg);
           }
           &:nth-of-type(6) {
-            background-image: url(./../images/새로워진이니스프리/34517_l_S_320.jpg);
+            background-image: url(./../images/new/34517_l_S_320.jpg);
           }
 
           > a {
@@ -576,7 +601,7 @@
 /*  게임*/
       > .game-center {
         z-index: -2;
-        height: 90px;
+        height: 100px;
         display: flex;
         justify-content: space-evenly;
         // background: rgba(25,31, 52, 0.2);
@@ -592,6 +617,7 @@
           border-radius: 30px;
           color: #777;
           &:hover{
+            box-shadow:#575757 3px 2px 2px 0;
             background-color: #ced0d2;
             border: 1px solid #777;
           }
@@ -600,117 +626,558 @@
     } //end of .slides
   } //section
 
-  /* 나이병 선호도  리얼리티 */
->.hot-real-list{
+  /* 나이별 선호도  리얼리티 */
+>#hot-real-list{
+  background-color: #fafafa;
+  height: 800px;
   >h1{
-   width: 1280px;
-    height: 60px;
-    margin: 50px auto;
+  width: 100%;
+    height: 80px;
+    margin:0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 30px;
-    line-height: 60px;
+    line-height: 80px;
     text-align: center;
-    border: 1px solid #000;
     @include gradient();
-  }
+    >span{
+      color: #1beb00;
+    }
+   }//h1 
+   >.inner-serch{
+    position: relative;
+    right: 150px;
+    top:-80px;
+    height: 60px;
+    
+    >a{
+      >input{
+        width: 50px;
+        height: 30px;
+        position: absolute;
+        right: 150px;
+        top:0;
+        padding-left:30px;
+        border: none;
+        border-radius: 20px;
+        background-color: #fafafa;
+        &:hover{
+          width: 200px;
+        height: 30px;
+        padding-left:30px;
+        border: none;
+        border-radius: 20px;
+        }
+      }//input
+      }//a
+     >button{
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 150px;
+      top: 0;
+      border: none;
+      background: none;
+      background-image:url(./../images/icon_search.png);
+      text-indent:-9999px;
+     }
+   }//innerserch
 >.container{
   width: 1280px;
-  margin: 0 auto;
+ margin:30px auto;
   display: flex;
  justify-content: space-between;
  align-items: center;
- background-color: #12b560;
+
   >.early{
     position: relative;
     width: 400px;
     height: 500px;
-    border: 1px solid #d5d5d5;
-    >.list-container{
-      
+    background-color: #fff;
+    border: 2px solid  #0075379a;
+    border-radius: 10px;
+    >.list-container{ 
       >li{
-        border: 1px solid #b03232;
+
         >a{
+          position: relative;
+          display: block;
+          width: 100px;
+          height:100px;
+           border:1px solid #a9a9a9;
+           box-shadow:rgb(107, 107, 107) 3px 2px 2px 1px;
+          &:hover{
+            z-index: 100;
+            width: 100px;
+            height:100px;
+            transform: scale(1.5);
+          border: 2px solid #1beb00;
+          }
         >img{
-          width: 80px;
-          border: 1px solid #000;
+          width: 100px;
+         height:100px;
         }
       }
+      >.list1{
+        position: absolute;
+        left: 80px;
+        top:100px;
+        
+      }
+      >.list2{
+        position: absolute;
+        left: 120px;
+        top: 60px;
+       
+      }
+      .list3{
+        position: absolute;
+        left: 50%;
+        top: 150px;
+        
+      }
+      >.list4{
+        position: absolute;
+        left:100px;
+        top: 50%;
+        
+      }
+      >.list5{
+        position: absolute;
+        left: 190px;
+        top: 70px;
+        
+      }
+      >.list6{
+        position: absolute;
+        left: 120px;
+        top: 170px;
+      }
+      >.list7{
+        position: absolute;
+        left: 190px;
+        top: 250px;
+      }
+     
       }//li   
+      
 }//list-container
 > button {
   width: 200px;
   height: 50px;
   position: absolute;
-  left: 30%;
-  bottom: 0;
-  // border: 1px solid #000;
-  // border-radius: 30px;
-}
-    
+  left:100px;
+  bottom: 30px;
+  border-radius: 10px;
+  border: none;
+  border: 1px solid #988f8f;
+  box-shadow: 5px 5px 3px 0px;
+  background-color: #fff;
+  &:hover{
+   border: 1px solid #988f8f;
+  box-shadow:#575757 0px 0px 0px 0;
+  }
+} 
   }//early
   >.mid{
     position: relative;
     width: 400px;
     height: 500px;
-    border: 1px solid #d5d5d5;
-    >.list-container{
-      
+    background-color: #fff;
+    border: 2px solid  #0075379a;
+    border-radius: 10px;
+
+    >.list-container{ 
       >li{
-        border: 1px solid #b03232;
         >a{
+          position: relative;
+          display: block;
+          width: 80px;
+          height: 90px;
+          border:1px solid #a9a9a9;
+          box-shadow:rgb(107, 107, 107) 3px 2px 2px 1px;
+          &:hover{
+            z-index: 100;
+            width: 80px;
+            height: 90px;
+            transform: scale(1.5);
+          border: 2px solid #1beb00;
+          }
         >img{
           width: 80px;
-          border: 1px solid #000;
+         height: 90px;
         }
       }
+      >.list1{
+        position: absolute;
+        left: 80px;
+        top:100px;
+        
+      }
+      >.list2{
+        position: absolute;
+        left: 120px;
+        top: 60px;
+       
+      }
+      .list3{
+        position: absolute;
+        left: 50%;
+        top: 150px;
+        
+      }
+      >.list4{
+        position: absolute;
+        left:100px;
+        top: 50%;
+        
+      }
+      >.list5{
+        position: absolute;
+        left: 190px;
+        top: 70px;
+        
+      }
+      >.list6{
+        position: absolute;
+        left: 120px;
+        top: 170px;
+      }
+      >.list7{
+        position: absolute;
+        left: 190px;
+        top: 250px;
+      }
+     
       }//li   
+      
 }//list-container
-         > button {
-          width: 200px;
-          height: 50px;
-          position: absolute;
-          left: 50%;
-          bottom: 0;
-          // border: 1px solid #000;
-          // border-radius: 30px;
-        }
+> button {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  left:100px;
+  bottom: 30px;
+  border-radius: 10px;
+  border: none;
+  border: 1px solid #988f8f;
+  box-shadow: 5px 5px 3px 0px;
+  background-color: #fff;
+  &:hover{
+    border: 1px solid #988f8f;
+  box-shadow:#575757 0px 0px 0px 0;
+  }
+} 
   }//mid
+
   >.late{
     position: relative;
     width: 400px;
     height: 500px;
-    border: 1px solid #d5d5d5;
-    > button {
+    background-color: #fff;
+    border: 2px solid  #0075379a;
+    border-radius: 10px;
+    >.list-container{ 
+      >li{
+        >a{
+          position: relative;
+          display: block;
+          width: 80px;
+          height: 90px;
+          border:1px solid #a9a9a9;
+          box-shadow:rgb(107, 107, 107) 3px 2px 2px 1px;
+          &:hover{
+            z-index: 100;
+            width: 80px;
+            height: 90px;
+            transform: scale(1.5);
+          border: 2px solid #1beb00;
+          }
+        >img{
+          width: 80px;
+         height: 90px;
+        }
+      }
+      >.list1{
+        position: absolute;
+        left: 80px;
+        top:100px;
+        
+      }
+      >.list2{
+        position: absolute;
+        left: 120px;
+        top: 60px;
+       
+      }
+      .list3{
+        position: absolute;
+        left: 50%;
+        top: 150px;
+        
+      }
+      >.list4{
+        position: absolute;
+        left:100px;
+        top: 50%;
+        
+      }
+      >.list5{
+        position: absolute;
+        left: 190px;
+        top: 70px;
+        
+      }
+      >.list6{
+        position: absolute;
+        left: 120px;
+        top: 170px;
+      }
+      >.list7{
+        position: absolute;
+        left: 190px;
+        top: 250px;
+      }
+     
+      }//li   
+      
+}//list-container
+> button {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  left:100px;
+  bottom: 30px;
+  border-radius: 10px;
+  border: none;
+  border: 1px solid #988f8f;
+  box-shadow: 5px 5px 3px 0px;
+  background-color: #fff;
+  &:hover{
+    border: 1px solid #988f8f;
+  box-shadow:#575757 0px 0px 0px 0;
+  }
+} 
+  }//late
+
+}//contaiener
+
+}//hot-real-list
+//나도 이니스프리하다
+>#contents{
+  background-color: #12b56163;
+  height: 1200px;
+  >h1{
+    width: 100%;
+      height: 80px;
+      margin: 0 auto;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 30px;
+      line-height: 80px;
+      text-align: center;
+      @include gradient();
+      >span{
+        color: #1beb00;
+        font-size: 35px;
+      }
+    }
+    >.contents-container{
+      >.swiper{
+      >.swiper-slides{
+      width: 1280px;
+      margin:60px auto ;
+        >ul{position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          margin-top: 50px;
+          >li{ 
+            padding: 30px;
+            width: 240px;
+            margin-right: 30px;
+            background-position: center center;
+            background-color: rgba(243, 243, 243, 0.3);
+            &:hover{
+                transition: all .3s;
+                  transform:scale(1.1);
+                  backface-visibility: hidden;
+                  background: url(./../images/new/INNISFREEBG-1.png);
+                  background-repeat: no-repeat;
+                 background-size: 100%;
+                  }
+            >a{
+              display: block;
+              width: 230px;
+              height: 230px;
+              overflow: hidden;
+              >img{
+                width: 100%;
+                z-index: 2;
+              }
+                }//a
+             >strong{
+              font-size: 16px;
+              line-height: 32px;
+              color: red;
+            } 
+           >.zzim{
+            position: relative;
+            top: 0;
+            right: 0;
+           }
+      
+              >.zzim{
+                width: 25px;
+                height: 25px;
+                border: 0;    
+                background: url(./../images/pdtUtil_best_zzim.png) no-repeat 50% 50%;
+                text-indent: -9999px;
+                &:hover{
+                  width: 25px;
+                  height: 25px;
+                  background: url(./../images/new/138533.png);
+                  background-size: cover;
+                }
+              }
+
+            
+            >.prod{
+              width: 230px;
+              text-align: center;
+              >a{
+                display: block;
+                height: 80px;
+                line-height: 30px;
+                >.prod-name{
+                  font-size: 18px;
+                }
+                >.price{
+                  line-height: 1.6;
+                  >strong{
+                   font-size: 24px;
+                  }
+                >.price-1{
+                  font-size: 16px;
+                  font-family: 'roboL';
+                  margin: 0 2px 0 4px;
+                  text-decoration: line-through;
+                  font-weight: normal;
+                  color: #999;
+                  vertical-align: 2px;
+                }
+                >.price-2{
+                  color: #007536;
+                }
+               
+                
+              }//price
+            }//a
+          }//prod
+          
+          }//li
+        }//ul
+      }//slides
+      }//swiper
+    
+    }//.contents-container
+}//contents
+//쇼핑뉴스
+>#contents-news{
+  height: 900px;
+  >h1{
+    // width: 1280px;
+    margin: 0 auto;
+    background-color: #007536;
+    >a{
+      display: block;
+      height: 80px;
+      color: #12b560;
+      text-align: center;
+      line-height: 80px;
+      font-size: 36px;
+    }
+  }//h1
+  >.news-container{ 
+   
+    >.news-iteam{
+      display: flex;
+      width: 1230px;
+     margin: 0 auto;
+      >li{
+        display: block;
       width: 200px;
       height: 50px;
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      // border: 1px solid #000;
-      // border-radius: 30px;
-    }
-  }//late
-  &.list-container{
-    >li{
- >a{
-        display: block;
-        height: 30px;
- >img{
-      width: 50px; }
-    }
-    } 
-  }
-  & button {
-    width: 200px;
-    height: 50px;
-    position: absolute;
-    left: 50%;
+      margin-right: 10px;
+     background-color: #14ca42;
+    
+        >a{
+          display: block;
+          height: 50px;
+          font-size: 18px;
+          font-weight: 600;
+          text-align: center;
+          line-height: 50px;
+          color: #222;
+        }//a
+        >.news-iteam-list{          
+          >.prod{
+            width: 1200px;
+           margin:0 auto;
+           padding: 10px;
+            line-height: 1.6;
+            background-color: #fafafa;
+           border: 1px solid #dcdada;
+            overflow: hidden;
+            >h2{
+              margin-top: 20px;
+            }
+            >span{
+            margin-bottom: 30px;}
+            >.price{
+              width: 620px;
+              font-size: 18px;
+              margin-top: 20px;
+              margin-bottom: 20px;
+            }//price
+            >a{
+              display: block;
+              height: 700px;
 
-    // border: 1px solid #000;
-    // border-radius: 30px;
-  }
-}//contaiener
-}//hot-real-list
- 
+              >img{
+                width: 500px;
+              }
+            }
+          >ul{
+            display: flex;
+            width: 1200px;
+            >li{
+              width: 400px;
+              background-size: contain;
+              background-repeat: no-repeat;
+              &:nth-of-type(1){background-image: url(./../images/empty-bottle.jpg);}
+              &:nth-of-type(2){background-image: url(./../images/empty-bottle-b.jpg);}
+              &:nth-of-type(3){background-image: url(./../images/empty-bottle-a.jpg);}
+             
+              >a{
+                display: block;
+            height: 500px;
+              }
+             
+            
+            }//li
+          }//ul  
+          }//prod
+          
+        }//news-iteam-campain
+
+          &.on{
+                background-color: #88f475;
+              } 
+      }//li
+    }//news-iteam
+  }//news-container
+}//#contents--news
 
   > footer {
     height: 100px;
@@ -860,7 +1327,9 @@ border-bottom: 1px solid #dbdbdb;
       box-sizing: border-box;
       padding-left: 18px;
       background: url(./../images/arw_link_bs.png) no-repeat right 15px center;
-  
+  &:hover{
+    background-color: #0075379a;
+  }
 }
    }//service-center
   
