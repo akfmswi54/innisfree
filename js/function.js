@@ -119,3 +119,39 @@ if (true) {
   
 
 }
+
+//쇼핑뉴스
+
+if(true){
+  const $newsgnb = $(".news-container > .news-iteam > li > a");
+  const $bg_lnb = $(".news-container > .news-iteam > li > .news-iteam-list > .prod");
+
+
+    // $newsgnb.on("click",function(evt){
+    //   evt.preventDefault;
+    //   if($newsgnb.hasClass('more')){
+    //      $newsgnb.addClass('close').removeClass('more');
+    //      $newsgnb.css('visibility', 'visible');
+    //   }else if($bg_lnb.hasClass('close')){
+    //      $bg_lnb.addClass('more').removeClass('close');  
+    //      $('li').css('visibility', 'hidden');
+    //   }
+    // });
+    $newsgnb.on("click", function (evt) {
+      evt.preventDefault();
+  
+      nowIdx = $newsgnb.index(this);
+  
+      $newsgnb.eq(nowIdx).parent().addClass("on").siblings().removeClass("on");
+  
+      $bg_lnb.eq(nowIdx).fadeIn();
+
+    });
+    $newsgnb.eq(nowIdx).on("click", function (evt) {
+      evt.preventDefault();
+      $bg_lnb.next.fadeOut().siblings();
+      $bg_lnb.eq(nowIdx).fadeOut();
+      $bg_lnb.eq(nowIdx).fadeOut().siblings();
+    });
+ 
+}
