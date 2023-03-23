@@ -66,7 +66,13 @@ if (true) {
   const $btnPrev = $(".slides > .slides-navigation.slides-prev");
   const $btnNext = $(".slides > .slides-navigation.slides-next");
 
+  const $btnAuto = $(".slides > .slides-navigation slides-btn pause");
+
+  let intervalKey = null;
+
   let nowIdx = 0;
+  let oldIdx = nowIdx;
+
 
   $indicator.on("click", function (evt) {
     evt.preventDefault();
@@ -114,9 +120,34 @@ if (true) {
     $indicator.eq(nowIdx).parent().addClass("on").siblings().removeClass("on");
   });
 
+ //자동재생
+ const autoPlay = function () {
+  intervalKey = setInterval(function () {
+    $btnNext.trigger("click");
+  }, 3000);
 
-  
-  
+  $btnAuto.addClass("pause");
+};
+
+const autoStop = function () {
+  clearInterval(intervalKey);
+  $btnAuto.removeClass("pause");
+};
+ //재생,정지버튼 이벤트
+ $btnAuto.on("click", function (evt) {
+  evt.preventDefault();
+
+  if ($(this).hasClass("pause")) {
+    autoStop();
+  } else {
+    autoPlay();
+  }
+});
+
+//load 이벤트는 브라우저 화면에 모든 컨텐츠가 로딩완료된 시점에 발생
+$(window).on("load", function () {
+  autoPlay();
+});
 
 }
 
@@ -147,11 +178,11 @@ if(true){
       $bg_lnb.eq(nowIdx).fadeIn();
 
     });
-    $newsgnb.eq(nowIdx).on("click", function (evt) {
-      evt.preventDefault();
-      $bg_lnb.next.fadeOut().siblings();
-      $bg_lnb.eq(nowIdx).fadeOut();
-      $bg_lnb.eq(nowIdx).fadeOut().siblings();
-    });
+    // $newsgnb.eq(nowIdx).on("click", function (evt) {
+    //   evt.preventDefault();
+    //   $bg_lnb.next.fadeOut().siblings();
+    //   $bg_lnb.eq(nowIdx).fadeOut();
+    //   $bg_lnb.eq(nowIdx).fadeOut().siblings();
+    // });
  
 }

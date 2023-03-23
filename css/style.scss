@@ -647,7 +647,25 @@
             font-size: 0;
           }
         }
+      //  &.slides-btn pause{
+      //   display: block;
+      //   position: absolute;
+      //   left: 60%;
+      //   width: 30px;
+      //   height: 30px;
+      //   margin-top: 10px;
+      //   text-indent: -9999px;
+      //   background-image: url(./../images/icons.png);
+      //   background-position: -62px -24px;
+      //   background-repeat: no-repeat;
+      //   border: 1px solid #000;
+        
+      // }
+    //   >.slides-btn.pause{
+    //     background-position: 0 -57px;
+    //  }
       } //end of .slides-navigation
+     
 /*  게임*/
       > .game-center {
         z-index: -2;
@@ -673,6 +691,7 @@
           }
         }//button
       }//game-center
+
     } //end of .slides
   } //section
 
@@ -815,8 +834,8 @@
       }
       >.list7{
         position: absolute;
-        left: 190px;
-        top: 250px;
+        left:220px;
+        top: 260px;
       }
      
       }//li   
@@ -852,20 +871,20 @@
         >a{
           position: relative;
           display: block;
-          width: 80px;
-          height: 90px;
+          width: 100px;
+          height: 100px;
           border:1px solid #a9a9a9;
           box-shadow:rgb(107, 107, 107) 3px 2px 2px 1px;
           &:hover{
             z-index: 100;
-            width: 80px;
-            height: 90px;
+            width:100px;
+            height:100px;
             transform: scale(1.5);
           border: 2px solid #1beb00;
           }
         >img{
-          width: 80px;
-         height: 90px;
+          width: 100px;
+         height: 100px;
         }
       }
       >.list1{
@@ -882,7 +901,7 @@
       }
       .list3{
         position: absolute;
-        left: 50%;
+        left: 60%;
         top: 150px;
         
       }
@@ -894,8 +913,8 @@
       }
       >.list5{
         position: absolute;
-        left: 190px;
-        top: 70px;
+        left: 230px;
+        top: 60px;
         
       }
       >.list6{
@@ -905,8 +924,8 @@
       }
       >.list7{
         position: absolute;
-        left: 190px;
-        top: 250px;
+        left: 220px;
+        top: 260px;
       }
      
       }//li   
