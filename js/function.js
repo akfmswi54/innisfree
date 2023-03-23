@@ -124,7 +124,7 @@ if (true) {
  const autoPlay = function () {
   intervalKey = setInterval(function () {
     $btnNext.trigger("click");
-  }, 3000);
+  },8000);
 
   $btnAuto.addClass("pause");
 };
