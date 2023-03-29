@@ -1164,9 +1164,6 @@
   background-repeat: no-repeat;
   text-indent: -9999px;
 }
-#wrap > footer > .footer-top > .footer-top-container > .ftsns:hover {
-  border: 1px solid #000;
-}
 #wrap > footer > .footer-bottom {
   max-width: 1280px;
   padding: 54px 0 0;
